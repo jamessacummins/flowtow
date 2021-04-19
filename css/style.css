@@ -282,7 +282,7 @@ hgroup h1{
 
         display:flex;
         align-items:center;        
-
+        flex-wrap:wrap;
     }
     
         .ten-item:first-child{
@@ -299,6 +299,7 @@ hgroup h1{
             height: 65px;
             width: 65px;
             object-fit: fill;
+            margin-right:10px;
             
             border-radius:50%;
             border:var(--offwht) 1px solid;
@@ -306,7 +307,7 @@ hgroup h1{
         .ten-user{
             font-weight: 600;
             font-size: 1.2rem;
-            margin: auto 10px;
+            margin-right: 10px;
         }
         .ten-user:after{
             content: " :";
@@ -335,6 +336,31 @@ hgroup h1{
         .ten-likeicon{
             height:1.3rem;
         }
+@media (max-width: 800px){
+    .ten-thumbnail{
+        margin: 10px calc(50% - 35px);
+    }
+    .ten-likes{
+        margin-left:auto;
+    }
+    .ten-br{
+        display:none;
+    }
+    .ten-comment{
+        margin-right:auto;
+    }
+    .ten-item{
+        border-top:var(--offwht) solid 1px;
+        font-size: .7rem;
+        padding: 0px 20px;
+    }
+    .ten-item > * {
+        font-size: .7rem;
+    }
+    .ten-item:last-child{
+        border-bottom:var(--offwht) solid 1px;
+    }
+}
 /*
 * === Content - Most Recent ===
 */
