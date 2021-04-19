@@ -1,0 +1,347 @@
+<!--
+  Student Name:
+  Student Number:
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>FlowTow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="./css/animate.css" type="text/css"/>
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+
+    <!-- Include Handlebars from a CDN -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="./js/main.js" type=module defer></script> -->
+  </head>
+  <body>
+
+    <header>
+      <div id="logo"></div>
+      <nav>
+          <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#!/all-posts">All Posts</a></li>
+              <li><a href="#!/my-posts">My Posts</a></li>
+              <li><a href="#whatis">About</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <div id="content">
+
+      <div id="heading">
+          
+          <hgroup>
+              <h1>Welcome to FlowTow</h1>
+          </hgroup>
+      
+          <div id="target"></div>
+
+          <section id="threeposts">
+            <h2 class="tp-header">
+              <!-- Note that wavy is in common usage in the last five years as a synonym for 'cool' -->
+              Wavy Right Now
+            </h2>
+            <div class="tp-listcontainer">
+              <div class="tp-listitem" id="1">
+                <img src="img/food.jpg" alt="This is the post image" class="tp-img">
+                <div class="tp-iconcontainer">
+                  <img class="tp-icon" src="img/like-dark.svg" alt="A clickable icon representing the ability to like or love a post."></img>
+                  <img class="tp-icon" src="img/comment.svg" alt="A clickable icon representing the ability to make a comment."></img>
+                </div>
+                <div class="tp-likecontainer">
+                  Liked by 
+                  <span class='tp-likes'>
+                    10
+                  </span> 
+                  flowtowers
+                </div>
+                <div class='tp-captioncontainer'>
+                  <span class="tp-username">
+                    Alice
+                  </span>
+                  <span class="tp-caption">
+                    Penelope Curtis
+                  </span>
+                </div>
+              </div>
+              <div class="tp-listitem" id='2'>
+                <img src="img/food.jpg" alt="This is the post image" class="tp-img">
+                <div class="tp-iconcontainer">
+                  <img class="tp-icon" src="img/like-dark.svg" alt="A clickable icon representing the ability to like or love a post."></img>
+                  <img class="tp-icon" src="img/comment.svg" alt="A clickable icon representing the ability to make a comment."></img>
+                </div>
+                <div class="tp-likecontainer">
+                  Liked by 
+                  <span class='tp-likes'>
+                    20
+                  </span> 
+                  flowtowers
+                </div>
+                <div class='tp-captioncontainer'>
+                  <span class="tp-username">
+                    Alice
+                  </span>
+                  <span class="tp-caption">
+                    Tran Barrett
+                  </span>
+                </div>
+              </div>
+              <div class="tp-listitem" id="3">
+                <img src="img/food.jpg" alt="This is the post image" class="tp-img">
+                <div class="tp-iconcontainer">
+                  <img class="tp-icon" src="img/like-dark.svg" alt="A clickable icon representing the ability to like or love a post."></img>
+                  <img class="tp-icon" src="img/comment.svg" alt="A clickable icon representing the ability to make a comment."></img>
+                </div>
+                <div class="tp-likecontainer">
+                  Liked by 
+                  <span class='tp-likes'>
+                    33
+                  </span> 
+                  flowtowers
+                </div>
+                <div class='tp-captioncontainer'>
+                  <span class="tp-username">
+                    Bob
+                  </span>
+                  <span class="tp-caption">
+                    Maldonado Espinoza
+                  </span>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+      </div>
+      <section id="mostrecent">
+        <h2 class="mr-header">Top 10 Most Recent Posts</h2>
+        <ul class="mr-container ten-container">
+          <li id="1" class="mr-item ten-item">
+            <img src="img/opera-house.jpg" alt="This is a thumbnail image taken from the post in question." class="mr-thumbnail ten-thumbnail">
+            <div class="mr-user ten-user">James</div>
+            <div class="mr-comment ten-comment">What a wonderful day at the opera house!</div>
+            <div class="mr-br ten-br"></div>
+            <div class="mr-date ten-date">12th March 2018</div>
+            <div class="mr-likes ten-likes">43</div>
+            <img src="img/like-light.svg" alt="" class="mr-likeicon ten-likeicon">
+          </li>
+          <li id="2" class="mr-item ten-item">
+            <img src="img/opera-house.jpg" alt="This is a thumbnail image taken from the post in question." class="mr-thumbnail ten-thumbnail">
+            <div class="mr-user ten-user">James</div>
+            <div class="mr-comment ten-comment">What a wonderful day at the opera house!</div>
+            <div class="mr-br ten-br"></div>
+            <div class="mr-date ten-date">12th March 2018</div>
+            <div class="mr-likes ten-likes">43</div>
+            <img src="img/like-light.svg" alt="" class="mr-likeicon ten-likeicon">
+          </li>
+          <li id="3" class="mr-item ten-item">
+            <img src="img/opera-house.jpg" alt="This is a thumbnail image taken from the post in question." class="mr-thumbnail ten-thumbnail">
+            <div class="mr-user ten-user">James</div>
+            <div class="mr-comment ten-comment">What a wonderful day at the opera house!</div>
+            <div class="mr-br ten-br"></div>
+            <div class="mr-date ten-date">12th March 2018</div>
+            <div class="mr-likes ten-likes">43</div>
+            <img src="img/like-light.svg" alt="" class="mr-likeicon ten-likeicon">
+          </li>
+          <li id="4" class="mr-item ten-item">
+            <img src="img/opera-house.jpg" alt="This is a thumbnail image taken from the post in question." class="mr-thumbnail ten-thumbnail">
+            <div class="mr-user ten-user">James</div>
+            <div class="mr-comment ten-comment">What a wonderful day at the opera house!</div>
+            <div class="mr-br ten-br"></div>
+            <div class="mr-date ten-date">12th March 2018</div>
+            <div class="mr-likes ten-likes">43</div>
+            <img src="img/like-light.svg" alt="" class="mr-likeicon ten-likeicon">
+          </li>
+          <li id="5" class="mr-item ten-item">
+            <img src="img/opera-house.jpg" alt="This is a thumbnail image taken from the post in question." class="mr-thumbnail ten-thumbnail">
+            <div class="mr-user ten-user">James</div>
+            <div class="mr-comment ten-comment">What a wonderful day at the opera house!</div>
+            <div class="mr-br ten-br"></div>
+            <div class="mr-date ten-date">12th March 2018</div>
+            <div class="mr-likes ten-likes">43</div>
+            <img src="img/like-light.svg" alt="" class="mr-likeicon ten-likeicon">
+          </li>
+          <li id="6" class="mr-item ten-item">
+            <img src="img/opera-house.jpg" alt="This is a thumbnail image taken from the post in question." class="mr-thumbnail ten-thumbnail">
+            <div class="mr-user ten-user">James</div>
+            <div class="mr-comment ten-comment">What a wonderful day at the opera house!</div>
+            <div class="mr-br ten-br"></div>
+            <div class="mr-date ten-date">12th March 2018</div>
+            <div class="mr-likes ten-likes">43</div>
+            <img src="img/like-light.svg" alt="" class="mr-likeicon ten-likeicon">
+          </li>
+          <li id="7" class="mr-item ten-item">
+            <img src="img/opera-house.jpg" alt="This is a thumbnail image taken from the post in question." class="mr-thumbnail ten-thumbnail">
+            <div class="mr-user ten-user">James</div>
+            <div class="mr-comment ten-comment">What a wonderful day at the opera house!</div>
+            <div class="mr-br ten-br"></div>
+            <div class="mr-date ten-date">12th March 2018</div>
+            <div class="mr-likes ten-likes">43</div>
+            <img src="img/like-light.svg" alt="" class="mr-likeicon ten-likeicon">
+          </li>
+          <li id="8" class="mr-item ten-item">
+            <img src="img/opera-house.jpg" alt="This is a thumbnail image taken from the post in question." class="mr-thumbnail ten-thumbnail">
+            <div class="mr-user ten-user">James</div>
+            <div class="mr-comment ten-comment">What a wonderful day at the opera house!</div>
+            <div class="mr-br ten-br"></div>
+            <div class="mr-date ten-date">12th March 2018</div>
+            <div class="mr-likes ten-likes">43</div>
+            <img src="img/like-light.svg" alt="" class="mr-likeicon ten-likeicon">
+          </li>
+          <li id="9" class="mr-item ten-item">
+            <img src="img/opera-house.jpg" alt="This is a thumbnail image taken from the post in question." class="mr-thumbnail ten-thumbnail">
+            <div class="mr-user ten-user">James</div>
+            <div class="mr-comment ten-comment">What a wonderful day at the opera house!</div>
+            <div class="mr-br ten-br"></div>
+            <div class="mr-date ten-date">12th March 2018</div>
+            <div class="mr-likes ten-likes">43</div>
+            <img src="img/like-light.svg" alt="" class="mr-likeicon ten-likeicon">
+          </li>
+          <li id="10" class="mr-item ten-item">
+            <img src="img/opera-house.jpg" alt="This is a thumbnail image taken from the post in question." class="mr-thumbnail ten-thumbnail">
+            <div class="mr-user ten-user">James</div>
+            <div class="mr-comment ten-comment">What a wonderful day at the opera house!</div>
+            <div class="mr-br ten-br"></div>
+            <div class="mr-date ten-date">12th March 2018</div>
+            <div class="mr-likes ten-likes">43</div>
+            <img src="img/like-light.svg" alt="" class="mr-likeicon ten-likeicon">
+          </li>
+        </ul>
+      </section>  
+
+      <section id="mostpopular">
+        <h2 class="mr-header">Top 10 Most Popular Posts</h2>
+        <ul class="mr-container ten-container">
+          <li id="1" class="mr-item ten-item">
+            <img src="img/sydney.jpg" alt="This is a thumbnail image taken from the post in question." class="mr-thumbnail ten-thumbnail">
+            <div class="mr-user ten-user">Oliver</div>
+            <div class="mr-comment ten-comment">So cool right?</div>
+            <div class="mr-br ten-br"></div>
+            <div class="mr-date ten-date">12th March 2018</div>
+            <div class="mr-likes ten-likes">119</div>
+            <img src="img/like-light.svg" alt="" class="mr-likeicon ten-likeicon">
+          </li>
+          <li id="2" class="mr-item ten-item">
+            <img src="img/sydney.jpg" alt="This is a thumbnail image taken from the post in question." class="mr-thumbnail ten-thumbnail">
+            <div class="mr-user ten-user">Oliver</div>
+            <div class="mr-comment ten-comment">So cool right?</div>
+            <div class="mr-br ten-br"></div>
+            <div class="mr-date ten-date">12th March 2018</div>
+            <div class="mr-likes ten-likes">119</div>
+            <img src="img/like-light.svg" alt="" class="mr-likeicon ten-likeicon">
+          </li>
+          <li id="3" class="mr-item ten-item">
+            <img src="img/sydney.jpg" alt="This is a thumbnail image taken from the post in question." class="mr-thumbnail ten-thumbnail">
+            <div class="mr-user ten-user">Oliver</div>
+            <div class="mr-comment ten-comment">So cool right?</div>
+            <div class="mr-br ten-br"></div>
+            <div class="mr-date ten-date">12th March 2018</div>
+            <div class="mr-likes ten-likes">119</div>
+            <img src="img/like-light.svg" alt="" class="mr-likeicon ten-likeicon">
+          </li>
+          <li id="4" class="mr-item ten-item">
+            <img src="img/sydney.jpg" alt="This is a thumbnail image taken from the post in question." class="mr-thumbnail ten-thumbnail">
+            <div class="mr-user ten-user">Oliver</div>
+            <div class="mr-comment ten-comment">So cool right?</div>
+            <div class="mr-br ten-br"></div>
+            <div class="mr-date ten-date">12th March 2018</div>
+            <div class="mr-likes ten-likes">119</div>
+            <img src="img/like-light.svg" alt="" class="mr-likeicon ten-likeicon">
+          </li>
+          <li id="5" class="mr-item ten-item">
+            <img src="img/sydney.jpg" alt="This is a thumbnail image taken from the post in question." class="mr-thumbnail ten-thumbnail">
+            <div class="mr-user ten-user">Oliver</div>
+            <div class="mr-comment ten-comment">So cool right?</div>
+            <div class="mr-br ten-br"></div>
+            <div class="mr-date ten-date">12th March 2018</div>
+            <div class="mr-likes ten-likes">119</div>
+            <img src="img/like-light.svg" alt="" class="mr-likeicon ten-likeicon">
+          </li>
+          <li id="6" class="mr-item ten-item">
+            <img src="img/sydney.jpg" alt="This is a thumbnail image taken from the post in question." class="mr-thumbnail ten-thumbnail">
+            <div class="mr-user ten-user">Oliver</div>
+            <div class="mr-comment ten-comment">So cool right?</div>
+            <div class="mr-br ten-br"></div>
+            <div class="mr-date ten-date">12th March 2018</div>
+            <div class="mr-likes ten-likes">119</div>
+            <img src="img/like-light.svg" alt="" class="mr-likeicon ten-likeicon">
+          </li>
+          <li id="7" class="mr-item ten-item">
+            <img src="img/sydney.jpg" alt="This is a thumbnail image taken from the post in question." class="mr-thumbnail ten-thumbnail">
+            <div class="mr-user ten-user">Oliver</div>
+            <div class="mr-comment ten-comment">So cool right?</div>
+            <div class="mr-br ten-br"></div>
+            <div class="mr-date ten-date">12th March 2018</div>
+            <div class="mr-likes ten-likes">119</div>
+            <img src="img/like-light.svg" alt="" class="mr-likeicon ten-likeicon">
+          </li>
+          <li id="8" class="mr-item ten-item">
+            <img src="img/sydney.jpg" alt="This is a thumbnail image taken from the post in question." class="mr-thumbnail ten-thumbnail">
+            <div class="mr-user ten-user">Oliver</div>
+            <div class="mr-comment ten-comment">So cool right?</div>
+            <div class="mr-br ten-br"></div>
+            <div class="mr-date ten-date">12th March 2018</div>
+            <div class="mr-likes ten-likes">119</div>
+            <img src="img/like-light.svg" alt="" class="mr-likeicon ten-likeicon">
+          </li>
+          <li id="9" class="mr-item ten-item">
+            <img src="img/sydney.jpg" alt="This is a thumbnail image taken from the post in question." class="mr-thumbnail ten-thumbnail">
+            <div class="mr-user ten-user">Oliver</div>
+            <div class="mr-comment ten-comment">So cool right?</div>
+            <div class="mr-br ten-br"></div>
+            <div class="mr-date ten-date">12th March 2018</div>
+            <div class="mr-likes ten-likes">119</div>
+            <img src="img/like-light.svg" alt="" class="mr-likeicon ten-likeicon">
+          </li>
+          <li id="10" class="mr-item ten-item">
+            <img src="img/sydney.jpg" alt="This is a thumbnail image taken from the post in question." class="mr-thumbnail ten-thumbnail">
+            <div class="mr-user ten-user">Oliver</div>
+            <div class="mr-comment ten-comment">So cool right?</div>
+            <div class="mr-br ten-br"></div>
+            <div class="mr-date ten-date">12th March 2018</div>
+            <div class="mr-likes ten-likes">119</div>
+            <img src="img/like-light.svg" alt="" class="mr-likeicon ten-likeicon">
+          </li>
+        </ul>
+      </section>  
+    </div>
+
+  <footer>
+
+    <div id="social">
+      <ul>
+        <li id="social-twitter">
+          <a href="https://twitter.com/flowtow">
+            <img src="img/twitter.svg" alt="The Twitter icon. Click here to be taken to Twitter." class='social-logo'>
+          </a>
+        </li>
+        <li id="social-facebook">
+          <a href="https://facebook.com/flowtow">  
+            <img src="img/Facebook.svg" alt="The Facebook icon. Click here to be taken to Facebook." class='social-logo'>
+          </a>
+        </li>
+        <li id="social-instagram">
+          <a href="https://instagram.com/flowtow">
+            <img src="img/Instagram.svg" alt="The Instagram icon. Click here to be taken to Instagram." class='social-logo'>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <ul class="footer-tos">
+      <li><a href="#">Terms</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Cookies</a></li>
+    </ul>
+    
+    <p id="copyright">All content and images subject to copyright &copy; COMP2110/6110 FlowTow 2021.</p>
+  </footer>
+
+
+  <!-- Templates -->
+
+  </body>
+</html>

@@ -1,0 +1,618 @@
+/*
+    === General ===
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root{
+    --darkbl: #01497C;
+    --darkbltrans: #01497c48;
+    --offwht: #fefefe;
+    --lightblk: #333;
+    --lightbl:#61a5c2;
+}
+
+
+*{
+    box-sizing:border-box;
+    margin:0px;
+    padding:0px;
+    font-family: 'Roboto', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+    font-weight:300;
+}
+a, a:link, a:visited {
+    color:inherit;
+}
+
+/*
+    === Header ===
+*/
+
+header{
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+    padding:.5em 4rem;
+    border-bottom: var(--lightblk) solid 1px;
+}
+#logo{
+    height:50px;
+    width:100px;
+    margin: 10px auto 10px 20px;
+    background:url("../img/FlowTow.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: center;
+    order:1;
+}
+
+header nav {
+    align-self:center;
+    order:2;
+    
+}
+
+#search-form{
+    order:3;
+    display:flex;
+    align-items:center;
+}
+
+/*
+    === Header: Inside Nav ===
+*/
+
+header nav ul {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+header nav ul li {
+    display:block;
+    margin-right:1em;
+}
+header nav ul li a {
+    color:var(--lightblk);
+    text-decoration:none;
+    cursor:pointer;
+    font-weight:400;
+}
+header nav ul li a:hover {
+    text-decoration:underline;
+    color:#777;
+}
+
+/*
+    === Header: Inside Search ===
+*/
+
+
+.form-input{
+    display:flex;
+    align-items:center;
+}
+
+.form-input label{
+    font-weight:400;
+    margin-right:.5rem;
+}
+#search-input{
+    border: solid 1px var(--darkbl);
+    padding: .2rem .5rem;
+}
+#search-button{
+    margin-left:-.5rem;
+    padding:8px;
+    border-radius:50%;
+    border: solid 1px #fefefe;
+    background-color: var(--darkbl);
+    color:#fefefe;
+    font-weight:500;
+    cursor:pointer;
+} 
+#search-button:hover{
+    background-color: #61a5c2;
+}
+
+
+/*
+* === Content ===
+*/
+/*
+* === Content - Welcome ===
+*/
+
+#heading{
+    text-align:center;
+    background:
+        linear-gradient(to right, #22333333, #22333333 ),
+        url("../img/stream.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position:bottom ;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+}
+
+hgroup{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: auto;
+    min-height:600px;
+}
+
+hgroup h1{
+    
+    color:#fefefe;
+    text-transform:capitalize;
+    font-weight:700;
+    font-size:4rem;
+    margin:auto 0px;
+
+    animation:fadeInDown both;
+    animation-delay:.5s;
+    animation-duration: 3s;
+}
+
+
+/*
+* === Content - Threeposts ===
+*/
+
+#threeposts{
+    background-color: rgba(0,0,0,.5);
+    animation:fadeInDownSmall both;
+    animation-delay: 1.5s;
+    animation-duration: 2s;
+}
+
+.tp-header{
+    text-transform: uppercase;
+    font-style:italic;
+    font-weight:bold;
+    color:var(--offwht);
+    font-size:2rem;
+    margin: 2rem 20vw;
+    text-align:center;
+
+}
+
+.tp-listcontainer{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+
+}
+    .tp-listitem{
+        flex: 1 1 0;
+        margin:1rem;
+        margin-left:0px;
+        background-color:var(--offwht);
+        color:var(--lightblk);
+        border-radius:5px;
+
+        display:flex;
+        flex-direction: column;
+        overflow:hidden;
+
+    }
+    .tp-listitem:first-child{
+        margin-left:1rem;
+    }
+    .tp-listitem:hover{
+        animation:enlarge .5s forwards;
+    }
+    
+        .tp-img{
+            width:100%;
+            margin-top:30px;
+        }
+        .tp-iconcontainer{
+            display:flex;
+            justify-content: space-between;
+            padding:20px;
+        }
+        .tp-icon{
+            height:30px;
+            fill:var(--darkbl);
+            margin-right:10px;
+            cursor: pointer;
+        }
+        .tp-likecontainer{
+            text-align:left;
+            padding: 0px 20px;
+            font-size:.9rem;
+            color:#777;
+        }
+            .tp-likes{
+                font-weight:bold;
+                color:var(--darkbl);
+
+            }
+        .tp-captioncontainer{
+            padding: 20px 20px;
+            text-align:left;
+        }
+            .tp-username{
+                width:fit-content;
+                font-weight:bold;
+            }
+            .tp-username::after{
+                content: " : ";
+            }
+            .tp-caption{
+                width:fit-content;
+            }
+@media (max-width:800px){
+.tp-listcontainer{
+    flex-direction:column;
+    align-content:center;
+    
+}
+    .tp-listitem{
+        width:auto;
+        margin: 0px 20px 20px;
+        flex-wrap:wrap;
+        overflow:visible;
+    }
+    
+    .tp-listitem::first-child{
+        margin-top:20px;
+    }
+}
+
+/*
+* === Top 10 formatting ===
+*/
+.ten-container{
+    padding:20px ;
+    display:flex;
+    flex-direction: column;
+    max-width:1000px;
+    margin:auto;
+}
+    .ten-item{
+        list-style-type: none;
+        padding: 0px 20px 20px;
+        margin-bottom: 20px;
+
+        display:flex;
+        align-items:center;        
+
+    }
+    
+        .ten-item:first-child{
+            padding-top: 20px;
+        }
+        .ten-item > * {
+            flex: 0 1 0;
+            white-space: nowrap;
+            color:var(--offwht);
+            font-weight: 400;
+
+        }
+        .ten-thumbnail{
+            height: 65px;
+            width: 65px;
+            object-fit: fill;
+            
+            border-radius:50%;
+            border:var(--offwht) 1px solid;
+        }
+        .ten-user{
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin: auto 10px;
+        }
+        .ten-user:after{
+            content: " :";
+        }
+        .ten-comment{
+            font-style:italic;
+            font-weight: 500;
+        }
+        .ten-br{
+            background-color:white;
+            height:1px;
+            flex-grow:10;
+            margin: auto 20px;
+        }
+        .ten-date{
+            font-style: italic;
+            font-weight: 300;
+            font-size: .8rem;
+            margin-right: 10px;
+        }
+        .ten-likes{
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-right:10px;
+        }
+        .ten-likeicon{
+            height:1.3rem;
+        }
+/*
+* === Content - Most Recent ===
+*/
+#mostrecent{
+    padding-top:75px ;
+    background-color: var(--darkbl);
+
+    animation:fadeInDownSmall both;
+    animation-delay: 2.5s;
+    animation-duration: 2s;
+}
+.mr-header{
+    font-size: 3rem;
+    text-align:center;
+    margin-bottom: 20px;
+    color:var(--offwht);
+}
+
+/*
+* === Content - Most Popular ===
+*/
+#mostpopular{
+    padding-top:75px ;
+    background-color: var(--lightbl);
+
+    animation:fadeInDownSmall both;
+    animation-delay: 3s;
+    animation-duration: 2s;
+}
+.mp-header{
+    font-size: 3rem;
+    text-align:center;
+    margin-bottom: 20px;
+    color:var(--offwht);
+}
+
+
+/*
+* === Content - What is Flowtow ===
+*/
+
+#whatis{
+    min-height:500px;
+    background-color: #61a5c2;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:0px 2rem;
+    text-align:center;
+
+}
+#whatis h2{
+    color:var(--offwht);
+    padding:3rem;
+    font-size:3rem;
+    font-weight:700;
+}
+#whatis p{
+    color:var(--offwht);
+    padding:.5rem;
+    font-weight:400;
+}
+
+/*
+* === Content - Sign Up ===
+*/
+
+#registration{
+    min-height:750px;
+    background:
+        linear-gradient(var(--darkbltrans),var(--darkbltrans) ),
+        url("../img/splash.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position:bottom ;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+}
+
+#registration h2{
+    font-weight:700;
+    font-size:40px;
+    margin-bottom:30px;
+    
+}
+#registration p{
+    font-weight:500;
+    font-size:25px;
+    margin-bottom:15px;
+    text-align:center;
+    
+}
+#registration-form{
+    margin-top:10px;
+    background-color:var(--offwht);
+    border: 2px solid var(--lightblk);
+    padding:2rem;
+    display:flex;
+    flex-direction:column;
+    color:var(--lightblk);
+}
+.form-input{
+   margin: 10px auto;
+   text-align:left;
+}
+.form-input label, input{
+    color:var(--lightblk);
+    font-size:20px;
+}
+.form-input input{
+    border: 1px solid var(--lightblk);
+    padding:5px;
+}
+.form-submit{
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.form-submit input {
+    padding:10px;
+    background-color:var(--darkbl);
+    color:var(--offwht);
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:500;
+}
+
+/*
+* === Content - Recent===
+*/
+
+#recent-users{
+    min-height:800px;
+    background-color: #012a4a;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    
+}
+#recent-users h2{
+    margin-top:auto;
+    margin-bottom: 1rem;
+    font-weight:700;
+    font-size:3rem;
+}
+
+#recent-users p{
+    margin-bottom: 1rem;
+    margin-top:50px;
+    font-weight:500;
+    font-size:2rem;
+    padding: 0 20px;
+    text-align:center;
+}
+
+#recent-user-list{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin: 50px 10px auto 10px;
+}
+#recent-user-list li{
+    list-style-type: none;
+}
+.user{
+    background-color:var(--lightbl);
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius:3px;
+    margin:10px;
+    font-size:1.3rem;
+}
+.user a{
+    text-decoration: none;
+}
+
+
+
+/*
+* === Footer ===
+*/
+
+footer{
+    background-color:var(--lightblk);
+    color:var(--offwht);
+    display:flex;
+    width:100%;
+    flex-wrap:wrap;
+}
+
+#social, .footer-tos{
+    flex: 1 1 250px;
+}
+#social ul, .footer-tos{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items: center;
+    list-style-type:none;
+    padding:10px;
+}
+#social ul li, .footer-tos li{
+    margin: 10px 15px;
+}
+#social ul li, .footer-tos li:hover{
+    color:#61a5c2;
+}
+footer p {
+    width:100%;
+    padding:30px 10px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.social-logo{
+    width:40px;
+}
+
+
+/*
+* === Tablet CSS ===
+*/
+
+@media (max-width:800px){
+    header{
+        justify-content:center;
+    }
+}
+
+/*
+* === Mobile CSS ===
+*/
+
+@media (max-width:600px){
+    header{
+        align-items:center;
+        padding: 10px 30px;
+    }
+    #logo{
+        margin:auto;
+    }
+    header nav{
+        margin: 10px auto;
+        font-size:.8rem;
+    }
+    #search-input{
+        width:125px;
+    }
+    #recent-users h2{
+        font-size:2rem;
+        padding: 0 20px;
+        text-align:center;
+    }
+    #recent-users p{
+        font-size:1rem;
+    }
+    #registration-form{
+        padding:15px;
+    }
+    #registration-form .form-input{
+        display:flex;
+        flex-direction:column;
+    }
+    #registration-form .form-input label {
+        margin-bottom:10px;
+    }
+    #whatis h2 {
+        padding:10px;
+        margin-bottom:40px;
+        font-size:1.5rem;
+    }
+    hgroup h2{
+        font-size:1.5rem;
+    }
+   
+}
+
